@@ -74,7 +74,7 @@ grid.export("advanced.svg",addClasses=T)
 
 #feldspar
 data(Feldspar)
-ggtern(data=Feldspar,aes(x=An,y=Ab,z=Or)) + geom_point()
+feldplot <- ggtern(data=Feldspar,aes(x=An,y=Ab,z=Or)) + geom_point()
 grid.export("feldspar.svg",addClasses=T)
 
 #feldspar with confidence
