@@ -77,12 +77,16 @@ data(Feldspar)
 ggtern(data=Feldspar,aes(x=An,y=Ab,z=Or)) + geom_point()
 grid.export("feldspar.svg",addClasses=T)
 
+#feldspar with confidence
+#gets error
+ggtern(data=Feldspar,aes(An,Ab,Or)) + geom_point() + geom_confidence()
+grid.export("feldspar_confidence.svg",addClasses=T)
 
 
 #USDA
 #Load the Data.
-data(USDA) #doesn't work
-load("USDA.RData")
+data(USDA)
+
 
 library(plyr)
 
