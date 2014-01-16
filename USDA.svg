@@ -980,7 +980,7 @@
           <g id="layout::axis-b.4-4-4-4.1" class="pushedvp viewport"/>
           <g id="layout::xlab.5-4-5-4.1" class="pushedvp viewport"/>
           <g id="layout::ylab.3-2-3-2.1" class="pushedvp viewport"/>
-          <g id="layout::guide-box.3-4-3-4.1" class="pushedvp viewport">
+          <g id="layout::guide-box.3-4-3-4.1" class="pushedvp viewport" transform="translate(-270,150)">
             <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4.1" class="pushedvp viewport">
               <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4::guide-box.3-4-3-4.1" class="pushedvp viewport">
                 <g id="GRID.gTableChild.6104.1" class="gTableChild gTableParent gTree grob gDesc">

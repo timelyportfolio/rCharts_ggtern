@@ -86,8 +86,6 @@ grid.export("feldspar_confidence.svg",addClasses=T)
 #USDA
 #Load the Data.
 data(USDA)
-
-
 library(plyr)
 
 #Put tile labels at the midpoint of each tile.
