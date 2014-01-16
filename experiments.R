@@ -53,3 +53,16 @@ plot3 <- ggtern(data=MYDATA,mapping=aes(x=A,y=B,z=C)) +
 #render
 plot3
 grid.export("facettern.svg",addClasses=TRUE)
+
+
+#advanced example
+plot3 + theme(ternary.options  =element_ternary(
+  showarrows       = TRUE,  #show or hide the ternary arrows 
+  padding          = 0.15,  #analogous to 'expand' for x and y.
+  arrowsep         = 0.075, #distance between tern axis and arrows
+  arrowstart       = 0.25,  #prop of axis where arrow starts
+  arrowfinish      = 0.75,  #prop of axis where arrow finishes
+  ticklength.major = 0.02,  #major ternary ticklength
+  ticklength.minor = 0.01   #minor ternary ticklength
+))
+grid.export("advanced.svg",addClasses=T)
