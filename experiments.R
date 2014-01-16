@@ -112,4 +112,6 @@ grid.export("USDA.svg",addClasses=T)
 
 #my own earthquake ternary
 data(quakes)
-ggtern(data=quakes,aes(x=-lat,y=long,z=mag)) + geom_point()
+ggtern(data=quakes,aes(x=-lat,y=long,z=mag)) +
+  geom_point() +
+  tern_limits(x=50,y=200,z=10)
