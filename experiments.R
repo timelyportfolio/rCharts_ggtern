@@ -74,7 +74,7 @@ grid.export("advanced.svg",addClasses=T)
 
 #feldspar
 data(Feldspar)
-feldplot <- ggtern(data=Feldspar,aes(x=An,y=Ab,z=Or)) + geom_point()
+feldplot <- ggtern(data=Feldspar,aes(x=An,y=Ab,z=Or)) + geom_point(aes(colour=Feldspar))
 grid.export("feldspar.svg",addClasses=T)
 
 #feldspar with confidence
@@ -106,3 +106,10 @@ ggtern(data=USDA,aes(Clay,Sand,Silt,color=Label,fill=Label)) +
   labs(title="USDA Textural Classification Chart",fill="Textural Class",color="Textural Class")
 
 grid.export("USDA.svg",addClasses=T)
+
+
+
+
+#my own earthquake ternary
+data(quakes)
+ggtern(data=quakes,aes(x=-lat,y=long,z=mag)) + geom_point()
