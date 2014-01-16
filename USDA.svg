@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO8859-1"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="765px" height="765px" viewBox="0 0 765 765" version="1.1">
   <metadata xmlns:gridsvg="http://www.stat.auckland.ac.nz/~paul/R/gridSVG/">
-    <gridsvg:generator name="gridSVG" version="1.3-1" time="2014-01-16 10:55:45"/>
+    <gridsvg:generator name="gridSVG" version="1.3-1" time="2014-01-16 10:57:01"/>
     <gridsvg:argument name="name" value="USDA.svg"/>
     <gridsvg:argument name="exportCoords" value="none"/>
     <gridsvg:argument name="exportMappings" value="none"/>
@@ -983,11 +983,11 @@
           <g id="layout::guide-box.3-4-3-4.1" class="pushedvp viewport">
             <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4.1" class="pushedvp viewport">
               <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4::guide-box.3-4-3-4.1" class="pushedvp viewport">
-                <g id="GRID.gTableChild.5973.1" class="gTableChild gTableParent gTree grob gDesc">
+                <g id="GRID.gTableChild.6104.1" class="gTableChild gTableParent gTree grob gDesc">
                   <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4::guide-box.3-4-3-4::guides.2-2-2-2.1" class="pushedvp viewport">
                     <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4::guide-box.3-4-3-4::guides.2-2-2-2::guides.2-2-2-2.1" class="pushedvp viewport">
                       <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4::guide-box.3-4-3-4::guides.2-2-2-2::guides.2-2-2-2::guides.2-2-2-2.1" class="pushedvp viewport">
-                        <g id="GRID.gTableChild.5974.1" class="gTableChild gTableParent gTree grob gDesc">
+                        <g id="GRID.gTableChild.6105.1" class="gTableChild gTableParent gTree grob gDesc">
                           <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4::guide-box.3-4-3-4::guides.2-2-2-2::guides.2-2-2-2::guides.2-2-2-2::background.1-6-16-1.1" class="pushedvp viewport"/>
                           <g id="layout::guide-box.3-4-3-4::guide-box.3-4-3-4::guide-box.3-4-3-4::guides.2-2-2-2::guides.2-2-2-2::guides.2-2-2-2::title.2-5-2-2.1" class="pushedvp viewport">
                             <g id="title.2-5-2-2.1" class="gTableChild text grob gDesc">

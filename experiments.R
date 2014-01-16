@@ -84,6 +84,8 @@ grid.export("feldspar.svg",addClasses=T)
 data(USDA) #doesn't work
 load("USDA.RData")
 
+library(plyr)
+
 #Put tile labels at the midpoint of each tile.
 USDA.LAB <- ddply(USDA,"Label",function(df){apply(df[,1:3],2,mean)})
 
@@ -100,3 +102,5 @@ ggtern(data=USDA,aes(Clay,Sand,Silt,color=Label,fill=Label)) +
   weight_percent() +
   theme(legend.justification=c(0,1),legend.position=c(0,1),axis.tern.padding=unit(.15,"npc")) +
   labs(title="USDA Textural Classification Chart",fill="Textural Class",color="Textural Class")
+
+grid.export("USDA.svg",addClasses=T)
