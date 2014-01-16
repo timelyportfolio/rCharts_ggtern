@@ -22,3 +22,34 @@ plot2 <- plot + tern_limits(T=1.0,L=0.7,R=0.7)
 plot2 <- plot2 + labs(x="THS",y="LHS",z="RHS")
 plot2
 grid.export("ternaryscales.svg", addClasses=T)
+
+
+#facetting example
+set.seed(1) #for reproduceability
+MYDATA <- data.frame(A=runif(100),
+                     B=runif(100),
+                     C=runif(100),
+                     groupA=rep(paste(c("A1","A2"),""),50)[sample(50)],
+                     groupB=rep(paste(c("B1","B2"),""),50)[sample(50)]) 
+
+#create plot3
+plot3 <- ggtern(data=MYDATA,mapping=aes(x=A,y=B,z=C)) + 
+  labs(title ="Example Ternary plot3s w/ Facetting",
+       fill  ="Fill Metric",
+       color ="Color Metric",
+       alpha ="Alpha Metric",
+       x     ="T",
+       y     ="L",
+       z     ="R") + 
+  facet_grid(groupA~groupB) +
+  stat_density2d(fullrange=T,n=200,
+                 geom="polygon",
+                 aes(fill  =..level..,
+                     alpha =..level..)) + 
+  theme_tern_rgbw()  + #custom themes 
+  atomic_percent()   + #make ternary scales on atomic %
+  geom_point(size=3,shape=16,
+             aes(colour=factor(paste0(groupA,"/",groupB))))
+#render
+plot3
+grid.export("facettern.svg",addClasses=TRUE)
