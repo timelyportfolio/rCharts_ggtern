@@ -46,7 +46,7 @@ plot3 <- ggtern(data=MYDATA,mapping=aes(x=A,y=B,z=C)) +
                  geom="polygon",
                  aes(fill  =..level..,
                      alpha =..level..)) + 
-  theme_tern_rgbw()  + #custom themes 
+  theme_rgbw()  + #custom themes 
   atomic_percent()   + #make ternary scales on atomic %
   geom_point(size=3,shape=16,
              aes(colour=factor(paste0(groupA,"/",groupB))))
