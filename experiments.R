@@ -9,6 +9,8 @@ library(ggplot2)
 library(ggtern)
 library(gridSVG)
 
+x11(height=11,width=11)
+
 #examples from website http://ggtern.com
 #basic example
 plot <- ggtern()
@@ -61,8 +63,40 @@ plot3 + theme(ternary.options  =element_ternary(
   padding          = 0.15,  #analogous to 'expand' for x and y.
   arrowsep         = 0.075, #distance between tern axis and arrows
   arrowstart       = 0.25,  #prop of axis where arrow starts
-  arrowfinish      = 0.75,  #prop of axis where arrow finishes
+  arrowfinish      = 0.75,  #
+  prop of axis where arrow finishes
   ticklength.major = 0.02,  #major ternary ticklength
   ticklength.minor = 0.01   #minor ternary ticklength
 ))
 grid.export("advanced.svg",addClasses=T)
+
+
+
+#feldspar
+data(Feldspar)
+ggtern(data=Feldspar,aes(x=An,y=Ab,z=Or)) + geom_point()
+grid.export("feldspar.svg",addClasses=T)
+
+
+
+#USDA
+#Load the Data.
+data(USDA) #doesn't work
+load("USDA.RData")
+
+#Put tile labels at the midpoint of each tile.
+USDA.LAB <- ddply(USDA,"Label",function(df){apply(df[,1:3],2,mean)})
+
+#Tweak
+USDA.LAB$Angle=0; USDA.LAB$Angle[which(USDA.LAB$Label == "Loamy Sand")] = -35
+
+#Construct the plot.
+ggtern(data=USDA,aes(Clay,Sand,Silt,color=Label,fill=Label)) +
+  geom_polygon(alpha=0.75,size=0.5,color="black") +
+  geom_text(data=USDA.LAB,aes(label=Label,angle=Angle),color="black",size=3.5) +
+  theme_rgbw() +
+  theme_showsecondary() +
+  theme_showarrows() +
+  weight_percent() +
+  theme(legend.justification=c(0,1),legend.position=c(0,1),axis.tern.padding=unit(.15,"npc")) +
+  labs(title="USDA Textural Classification Chart",fill="Textural Class",color="Textural Class")
